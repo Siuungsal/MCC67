@@ -1,0 +1,34 @@
+﻿@model MCC67.Models.Produk
+
+<h3>Delete Product Page</h3>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>@Html.DisplayFor(model => Model.Id)</td>
+			<td>@Html.DisplayFor(model => Model.Name)</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Delete">
+			<div class="form-group">
+				<label>Apakah anda yakin ingin menghapus data ini?</label>
+			</div>
+			<div>
+				<input type="submit" value="Iya"/>
+				<a asp-action="">
+					<input type="button" value="Tidak" />
+				</a>
+			</div>
+		</form>
+	</div>
+</div>

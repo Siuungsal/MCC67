@@ -1,0 +1,33 @@
+﻿@model MCC67.Models.Supplier
+
+<h3>Edit Supplier Page</h3>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>@Html.DisplayFor(model => Model.Id)</td>
+			<td>@Html.DisplayFor(model => Model.Name)</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Edit">
+			<div class="form-group">
+				<label>Name</label>
+				<Input type="text" asp-for="Name" class="form-control" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<div>
+				<input type="submit" value="Save"/>
+			</div>
+		</form>
+	</div>
+</div>

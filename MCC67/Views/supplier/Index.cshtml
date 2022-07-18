@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MCC67.Models.Supplier>
+
+<div class="text-center">
+    <h1 class="display-4">Supplier Page</h1>
+</div>
+<div>
+	<a asp-action="Create">Create</a>
+</div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(model => item.Id)</td>
+				<td>@Html.DisplayFor(model => item.Name)</td>
+				<td> 
+					<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+					<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+				</td>
+			</tr>
+		}
+		<tr>
+			<td>
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+	</tbody>
+</table>

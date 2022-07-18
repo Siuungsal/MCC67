@@ -1,0 +1,18 @@
+﻿@model MCC67.Models.Supplier
+
+<h3>Create Supplier Page</h3>
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+			<div class="form-group">
+				<label>Name</label>
+				<Input type="text" asp-for="Name" class="form-control" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<div>
+				<input type="submit" value="Submit"/>
+			</div>
+		</form>
+	</div>
+</div>
